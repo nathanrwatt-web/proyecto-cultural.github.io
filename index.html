@@ -3,67 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Proyecto Don Quixote</title>
+    <title>El Proyecto Don Quijote</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sticky Header + Navigation -->
-    <header class="sticky-header">
-        <div class="header-content">
-            <h1>El Proyecto Don Quixote</h1>
-            <p>Aquí se presenta el proyecto de Don Quixote</p>
-        </div>
-
-        <!-- Navigation Bar -->
-        <nav class="top-nav">
-            <ul>
-                <li><a href="#Tab1" class="tab-link active">Escena 1</a></li>
-                <li><a href="#Tab2" class="tab-link">Escena 2</a></li>
-                <li><a href="#Tab3" class="tab-link">Escena 3</a></li>
-                <li><a href="#podcast">Podcast</a></li>
-                <li><a href="sources.html">Recursos</a></li>
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h1>El Proyecto Don Quijote</h1>
+                <p>Una exploración cultural moderna de Cervantes</p>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#inicio" class="tab-link active">Inicio</a></li>
+                <li><a href="#podcast" class="tab-link">Podcast</a></li>
+                <li><a href="#contexto" class="tab-link">Contexto</a></li>
+                <li><a href="#adaptaciones" class="tab-link">Adaptaciones</a></li>
+                <li><a href="#recursos" class="tab-link">Recursos</a></li>
             </ul>
         </nav>
-    </header>
 
-    <!-- Tab Sections -->
-    <section id="Tab1" class="tab-content active section-grey">
-        <h2>Escena 1</h2>
-        <p>Este es el primer escenario del proyecto.</p>
-    </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Inicio / Home -->
+            <section id="inicio" class="tab-content active">
+                <div class="home-hero">
+                    <h2>Bienvenidos al Proyecto Don Quijote</h2>
+                    <p class="home-subtitle">Un proyecto cultural dedicado a explorar la obra más influyente de la literatura española.</p>
+                </div>
 
-    <section id="Tab2" class="tab-content section-blue">
-        <h2>Escena 2</h2>
-        <p>Este es el segundo escenario del proyecto.</p>
-    </section>
+                <div class="home-description">
+                    <p>
+                        Algo interesante.
+                    </p>
+                </div>
 
-    <section id="Tab3" class="tab-content section-white">
-        <h2>Escena 3</h2>
-        <p>Este es el tercer escenario del proyecto.</p>
-    </section>
+                <div class="home-gallery">
+                    <div class="gallery-item">
+                        <div class="image-placeholder">
+                            <!-- Replace src with your image -->
+                            <img src="images/quijote1.jpg" alt="Don Quijote">
+                            <p class="caption">Un foto</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-placeholder">
+                            <!-- Replace src with your image -->
+                            <img src="images/quijote2.jpg" alt="Sancho Panza">
+                            <p class="caption">Un foto</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-placeholder">
+                            <!-- Replace src with your image -->
+                            <img src="images/quijote3.jpg" alt="Cervantes">
+                            <p class="caption">Un foto</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Podcast Section -->
-    <section id="podcast" class="tab-content section-grey">
-        <h2>Escucha el Podcast</h2>
-        <audio controls>
-            <source src="podcasts/episode1.mp3" type="audio/mpeg">
-            Tu navegador no soporta el audio.
-        </audio>
-        <button id="toggleTranscript">Mostrar Transcripción</button>
-        <div id="transcription" class="hidden">
-            <p>Las transcripciones del podcast estarán disponibles aquí.</p>
-        </div>
-    </section>
+            <!-- Podcast -->
+            <section id="podcast" class="tab-content">
+                <h2>Escucha el Podcast</h2>
+                <p class="section-intro">Escucha nuestra discusión sobre Don Quijote y su relevancia cultural.</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Ve a los <a href="sources.html">Recursos</a></p>
-    </footer>
+                <div class="podcast-player">
+                    <audio id="podcastAudio" controls preload="none">
+                        <source src="podcasts/episode1.mp4" type="audio/mp4">
+                        <source src="podcasts/episode1.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el audio.
+                    </audio>
+                </div>
+
+                <div class="transcript-section">
+                    <button id="toggleTranscript">Mostrar Transcripción</button>
+                    <div id="transcription" class="hidden">
+                        <h3>Transcripción</h3>
+                        <p>
+                            [La transcripción]
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contexto -->
+            <section id="contexto" class="tab-content">
+                <h2>Contexto de Don Quijote</h2>
+                <p class="section-intro">Que necesitas saber antes de este proyecto.</p>
+
+                <div class="context-block">
+                    <h3>Contexto</h3>
+                    <p>
+                        Contexto
+                    </p>
+                </div>
+
+                <div class="context-block">
+                    <h3>Contexto de quien es Miguel de Cervantes (1547–1616)</h3>
+                    <p>
+                        Contexto
+                    </p>
+                </div>
+
+                <div class="context-block">
+                    <h3>Temas principales</h3>
+                    <ul class="theme-list">
+                        <li> Algo interesante </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Adaptaciones -->
+            <section id="adaptaciones" class="tab-content">
+                <h2>Adaptaciones de Don Quijote</h2>
+                <p class="section-intro">La influencia de Don Quijote se extiende a través de siglos y medios artísticos.</p>
+
+                <div class="adaptations-grid">
+                    <div class="adaptation-card">
+                        <h3>Cine y televisión</h3>
+                        <p>
+                          Algo interesante
+                        </p>
+                    </div>
+
+                    <div class="adaptation-card">
+                        <h3>Teatro</h3>
+                        <p>
+                            Algo interesante
+                        </p>
+                    </div>
+
+                    <div class="adaptation-card">
+                        <h3>Música</h3>
+                        <p>
+                            Algo interesante
+                        </p>
+                    </div>
+
+                    <div class="adaptation-card">
+                        <h3>Arte visual</h3>
+                        <p>
+                            Algo interesante
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recursos -->
+            <section id="recursos" class="tab-content">
+                <h2>Fuentes y Referencias</h2>
+                <ol>
+                    <li>Cervantes, Miguel. <em>Don Quijote de la Mancha</em>. [Agregar detalles de la edición]</li>
+                    <li>Referencias de investigación del podcast...</li>
+                    <li>Otras fuentes académicas o creativas...</li>
+                </ol>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Proyecto Cultural — Don Quijote de la Mancha</p>
+            </footer>
+        </main>
+    </div>
 
     <!-- Script for Tabs & Transcript -->
     <script>
         // Tabs functionality
-        const tabLinks = document.querySelectorAll('.top-nav a[href^="#Tab"]');
+        const tabLinks = document.querySelectorAll('.tab-link');
         const tabContents = document.querySelectorAll('.tab-content');
 
         tabLinks.forEach(link => {
@@ -73,7 +181,7 @@
                 tabContents.forEach(c => c.classList.remove('active'));
                 link.classList.add('active');
                 document.querySelector(link.getAttribute('href')).classList.add('active');
-                window.scrollTo({top:0, behavior:'smooth'});
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
 
@@ -83,7 +191,9 @@
 
         toggleBtn.addEventListener('click', () => {
             transcript.classList.toggle('hidden');
-            toggleBtn.textContent = transcript.classList.contains('hidden') ? 'Mostrar Transcripción' : 'Ocultar Transcripción';
+            toggleBtn.textContent = transcript.classList.contains('hidden')
+                ? 'Mostrar Transcripción'
+                : 'Ocultar Transcripción';
         });
     </script>
 </body>
