@@ -146,31 +146,155 @@ body {
     text-align: justify;
 }
 
+/* Project summary block */
+.home-summary {
+    max-width: 850px;
+    margin: 0 auto 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background-color: #faf8f5;
+    border-left: 4px solid #d4a84b;
+    border-radius: 0 6px 6px 0;
+}
+
+.home-summary h3 {
+    color: #3d2b1f;
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.home-summary p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #3c3c3c;
+}
+
+/* Gallery */
 .home-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0 auto 2.5rem;
+    width: 100%;
 }
 
 .gallery-item {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf8f5;
+    border: 1px solid #e8dcc8;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.image-placeholder img {
+.image-frame {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 6px;
-    background-color: #e8dcc8;
-    border: 1px solid #d4c5a9;
+    height: 360px;
+    background-color: #f0e8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .caption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #777;
+    padding: 0.9rem 1rem 1.1rem;
+    font-size: 0.92rem;
+    color: #555;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.caption strong {
+    color: #3d2b1f;
+    font-size: 1.02rem;
+}
+
+.caption span {
     font-style: italic;
+    color: #777;
+}
+
+/* Palabras Importantes (vocabulary) */
+.vocab-section {
+    margin: 0 auto 2rem;
+    padding: 1.75rem 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e0d5c0;
+    border-radius: 8px;
+}
+
+.vocab-section h3 {
+    color: #3d2b1f;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid #d4a84b;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.vocab-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.vocab-item {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #e8dcc8;
+}
+
+.vocab-item:first-child {
+    padding-top: 0.2rem;
+}
+
+.vocab-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0.2rem;
+}
+
+.vocab-item dt {
+    font-weight: 700;
+    color: #3d2b1f;
+    font-size: 1.02rem;
+    position: relative;
+    padding-right: 0.5rem;
+}
+
+.vocab-item dt::after {
+    content: ":";
+    color: #3d2b1f;
+    margin-left: 0.1rem;
+}
+
+.vocab-item dd {
+    margin: 0;
+    color: #3c3c3c;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .vocab-item {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
 }
 
 /* ====== PODCAST ====== */
@@ -236,9 +360,10 @@ body {
 /* ====== ADAPTACIONES ====== */
 .adaptations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .adaptation-card {
@@ -247,6 +372,9 @@ body {
     border-radius: 8px;
     border: 1px solid #e0d5c0;
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
 }
 
 .adaptation-card:hover {
@@ -256,13 +384,75 @@ body {
 
 .adaptation-card h3 {
     color: #3d2b1f;
-    margin-bottom: 0.6rem;
-    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #d4a84b;
+    padding-bottom: 0.4rem;
 }
 
-.adaptation-card p {
-    font-size: 0.95rem;
-    color: #555;
+.adaptation-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    flex: 1;
+    align-items: stretch;
+}
+
+.adaptation-image {
+    position: relative;
+    background-color: #e8dcc8;
+    border: 1px solid #d4c5a9;
+    border-radius: 6px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.adaptation-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.adaptation-image img[src=""],
+.adaptation-image img:not([src]) {
+    display: none;
+}
+
+.image-fallback {
+    position: absolute;
+    color: #a08a6a;
+    font-style: italic;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.adaptation-image img[src]:not([src=""]) ~ .image-fallback {
+    display: none;
+}
+
+.adaptation-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin: 0;
+    color: #3c3c3c;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    align-self: start;
+}
+
+.adaptation-list li {
+    margin-bottom: 0.4rem;
+}
+
+.adaptation-list li:last-child {
+    margin-bottom: 0;
 }
 
 /* ====== BUTTONS ====== */
@@ -365,7 +555,15 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
+    .image-frame {
+        height: 280px;
+    }
+
     .adaptations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adaptation-body {
         grid-template-columns: 1fr;
     }
 }
