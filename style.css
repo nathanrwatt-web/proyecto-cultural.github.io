@@ -359,8 +359,8 @@ body {
 
 /* ====== ADAPTACIONES ====== */
 .adaptations-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 1.75rem;
     margin-top: 1rem;
     width: 100%;
@@ -374,7 +374,7 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
-    min-height: 320px;
+    width: 100%;
 }
 
 .adaptation-card:hover {
@@ -392,8 +392,8 @@ body {
 
 .adaptation-body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 1.5rem;
     flex: 1;
     align-items: stretch;
 }
@@ -403,7 +403,7 @@ body {
     background-color: #e8dcc8;
     border: 1px solid #d4c5a9;
     border-radius: 6px;
-    min-height: 180px;
+    min-height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -437,22 +437,25 @@ body {
     display: none;
 }
 
-.adaptation-list {
-    list-style: disc;
-    padding-left: 1.2rem;
-    margin: 0;
+.adaptation-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.adaptation-feature-title {
+    color: #3d2b1f;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    font-style: italic;
+}
+
+.adaptation-feature-text {
     color: #3c3c3c;
-    font-size: 0.97rem;
-    line-height: 1.6;
-    align-self: start;
-}
-
-.adaptation-list li {
-    margin-bottom: 0.4rem;
-}
-
-.adaptation-list li:last-child {
-    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
 }
 
 /* ====== BUTTONS ====== */
